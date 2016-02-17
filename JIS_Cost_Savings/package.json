@@ -1,0 +1,16 @@
+{
+  "name": "jis_cost_savings",
+  "version": "1.0.0",
+  "description": "JIS Cost Savings App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "grunt": "0.4.5",
+    "grunt-contrib": "0.11.0"
+  }
+}
