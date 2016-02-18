@@ -1,43 +1,39 @@
-﻿module.exports = function (grunt) {
+﻿/// <binding />
+module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        compass: {
-            dist: {
-                options: {
-                    cssDir: 'styles',
-                    sassDir: 'sass',
-                    imagesDir: 'images',
-                    javascriptsDir: 'scripts',
-                    force: true
-                }
-            }
-        },
-        cssmin: {
-            minify: {
-                expand: true,
-                cwd: 'styles',
-                src: ['*.css', '!*.min.css'],
-                dest: 'styles',
-                ext: '.min.css'
-            }
-        },
         watch: {
-            sass: {
-                files: '**/*.scss',
-                tasks: ['compass']
-            },
-            css: {
-                files: '**/*.css',
-                tasks: ['cssmin'],
-            },
-            html: {
-                files: ['index.html', 'Index.cshtml'],
+            refresh: {
                 options: {
                     livereload: true
-                }
+                },
+                files : ['Views/Home/Index.cshtml', 'Views/Home/*']
+            }
+        },
+        connect: {
+            options: {
+                hostname: 'localhost',
+                directory: 'Views/Home/',
+                livereload: 35729 //62569
+            },
+            livereload: {
+                options: {
+                    directory: 'Views/Home/',
+                    open: true
+                },
+                files: [
+                    {
+                        expand: true,
+                        src: ['~/Views/Home/**'],
+                        dest: 'wwwroot'
+                    }
+                ]
             }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib');
-    grunt.registerTask('default', ['watch', 'compass']);
+
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+
+    grunt.registerTask('default', ['connect:livereload', 'watch']);
 }
