@@ -30,7 +30,6 @@
 
 /* Main Colors
 =================================================================== */
-
 .black,
 .black [class="box-header"],
 .black.box,
@@ -3005,3 +3004,37 @@ ul.messagesList li span.date {
 .navbar .brand{
 	font-size: 35px;
 }
+
+.table-striped-column > tbody > tr td:nth-of-type(1) {
+  background-color:ActiveCaption;
+  border:none;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(3) {
+  background-color:cadetblue;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(odd):hover {
+  background-color:aqua;
+}
+.table-striped-column > tbody > tr td:nth-of-type(even):hover {
+  background-color:none;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(5) {
+  background-color:cadetblue;
+}
+
+.table-striped-column > tbody > tr:nth-of-type(9) td:nth-of-type(3) {
+  background-color:#1C2B36;
+  text-align:right;
+}
+.table-striped-column > tbody > tr:nth-of-type(9) td:nth-of-type(5) {
+  background-color:#1C2B36;
+  text-align:right;
+}
+
+.table-striped-row > thead > tr:nth-of-type(1) {
+  background-color:ActiveCaption;
+}
+
