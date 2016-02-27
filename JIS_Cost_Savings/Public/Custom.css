@@ -38,20 +38,24 @@
     background-color:#0066cc;
 }
 
-table.table.table-striped tr td{
+table.table.table-striped tr td,
+table.table.table-striped tr td input{
     text-align:center;
 }
 
-table.table.table-striped tr.formula td:nth-child(1n+3){
+table.table.table-striped tr.formula td:nth-child(1n+3),
+table.table.table-striped tr.formula td:nth-child(1n+3) input
+{
     background-color:rgba(0,102,204,.1);
     text-align:right;
+    /*width:100px;*/
 }
 
 table.table.table-striped tr td:nth-child(1){
     font-size:small; 
     text-transform: uppercase;
     text-align: right;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .table-striped>tbody>tr:nth-of-type(odd){

@@ -310,6 +310,7 @@
     <Content Include="gruntfile.js" />
     <Content Include="Public\Custom.css" />
     <Content Include="Scripts\CostSavings.js" />
+    <Content Include="Scripts\ResultsController.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="package.json" />
     <Content Include="bower.json" />
@@ -417,6 +418,7 @@
     <Content Include="bower_components\jquery\README.md" />
     <Content Include="bower_components\jquery\src\.jshintrc" />
     <None Include="Properties\PublishProfiles\JIS-Cost-Savings.pubxml" />
+    <Content Include="Views\CostSavings\Results.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
