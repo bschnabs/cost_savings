@@ -1,0 +1,74 @@
+﻿/*.table-striped-column > tbody > tr td:nth-of-type(1) {
+  background-color:ActiveCaption;
+  border:none;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(3) {
+  background-color:cadetblue;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(odd):hover {
+  background-color:aqua;
+}
+.table-striped-column > tbody > tr td:nth-of-type(even):hover {
+  background-color:none;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(5) {
+  background-color:cadetblue;
+}
+
+.table-striped-column > tbody > tr:nth-of-type(9) td:nth-of-type(3) {
+  background-color:#1C2B36;
+  text-align:right;
+}
+.table-striped-column > tbody > tr:nth-of-type(9) td:nth-of-type(5) {
+  background-color:#1C2B36;
+  text-align:right;
+}
+
+.table-striped-row > thead > tr:nth-of-type(1) {
+  background-color:ActiveCaption;
+}*/
+
+.navbar,
+.navbar a.navbar-brand,
+.navbar-default .navbar-nav li a {
+    color:#fff;
+    background-color:#0066cc;
+}
+
+table.table.table-striped tr td{
+    text-align:center;
+}
+
+table.table.table-striped tr.formula td:nth-child(1n+3){
+    background-color:rgba(0,102,204,.1);
+    text-align:right;
+}
+
+table.table.table-striped tr td:nth-child(1){
+    font-size:small; 
+    text-transform: uppercase;
+    text-align: right;
+    max-width: 100px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+    background-color:rgba(0,0,0,.02);
+}
+
+table.table.table-striped tr td:nth-child(2){
+    max-width: 30px;
+    border-right: solid 4px rgba(0,0,0, .03);
+    /*box-shadow: rgba(0, 0, 0, .4) 1px 0 1px;*/
+    background-color:#fff;
+    font-size:x-small;
+    font-style:italic;
+}
+
+table.table.table-striped tr.new-section{
+    border-top: solid 10px #ddd;
+    font-weight:bold;
+}
+
