@@ -60,7 +60,7 @@ table.table.table-striped tr td:nth-child(1){
 
 table.table.table-striped tr td:nth-child(2){
     max-width: 30px;
-    border-right: solid 4px rgba(0,0,0, .03);
+    border-right: solid 3px #ddd;
     /*box-shadow: rgba(0, 0, 0, .4) 1px 0 1px;*/
     background-color:#fff;
     font-size:x-small;
