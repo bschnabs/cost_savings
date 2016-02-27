@@ -152,7 +152,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -310,6 +309,7 @@
     <Content Include="Global.asax" />
     <Content Include="gruntfile.js" />
     <Content Include="Public\Custom.css" />
+    <Content Include="Scripts\CostSavings.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="package.json" />
     <Content Include="bower.json" />
