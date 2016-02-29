@@ -76,20 +76,20 @@
                     <tr>
                         <td>Cutter Diameter</td>
                         <td>Inches</td>
-                        <td contenteditable="true" ng-model="resultsForm.cutDiameterComp">{{resultsForm.cutDiameterComp}}</td>
-                        <td contenteditable="true" ng-model="resultsForm.cutDiameterJIS">{{resultsForm.cutDiameterJIS}}</td>
+                        <td> <input contenteditable="true" ng-model="resultsForm.cutDiameterComp">
+                        <td> <input contenteditable="true" ng-model="resultsForm.cutDiameterJIS">
                     </tr>
                     <tr>
                         <td>Annual Production</td>
                         <td>Number</td>
-                        <td contenteditable="true" ng-model="resultsForm.annualProdComp">{{resultsForm.annualProdComp}}</td>
-                        <td contenteditable="true" ng-model="resultsForm.annualProdJIS">{{resultsForm.annualProdJIS}}</td>
+                        <td> <input contenteditable="true" ng-model="resultsForm.annualProdComp" ng-change="calcChangePerYear(resultsForm)">
+                        <td> <input contenteditable="true" ng-model="resultsForm.annualProdJIS" ng-change="calcChangePerYear(resultsForm)">
                     </tr>
                     <tr>
                         <td>Machine Burden Rate</td>
                         <td>$/Hour</td>
-                        <td>$75.00</td>
-                        <td>$75.00</td>
+                        <td><input /></td>
+                        <td><input /></td>
                     </tr>
                     <tr>
                         <td>Length of Cut</td>
@@ -106,56 +106,56 @@
                     <tr class="formula">
                         <td>Cut Time</td>
                         <td>Minutes</td>
-                        <td ng-model="resultsForm.cutTimeComp">1.60</td>
-                        <td> <input ng-model="resultsForm.cutTimeJIS"></td>
+                        <td> <input ng-model="resultsForm.cutTimeComp">
+                        <td> <input ng-model="resultsForm.cutTimeJIS">
                     </tr>
                     <tr>
                         <td>Tool Life</td>
                         <td>Pieces</td>
-                        <td>20</td>
-                        <td>45</td>
+                        <td><input ng-model="resultsForm.toolLifeComp" />
+                        <td><input ng-model="resultsForm.toolLifeJIS" />
                     </tr>
                     <tr>
                         <td>Tool Change Frequency</td>
                         <td>Number</td>
-                        <td>20</td>
-                        <td>30</td>
+                        <td> <input ng-model="resultsForm.toolChgFreqComp" ng-change="calcChangePerYear(resultsForm)" />
+                        <td> <input ng-model="resultsForm.toolChgFreqJIS" ng-change="calcChangePerYear(resultsForm)" />
                     </tr>
                     <tr class="formula">
                         <td>Tool Changes Per Year</td>
                         <td>Number</td>
-                        <td>25</td>
-                        <td>17</td>
+                        <td> <input ng-model="resultsForm.toolChgYearComp" ng-change="calcToolChangeTimeYear(resultsForm)" />
+                        <td> <input ng-model="resultsForm.toolChgYearJIS" ng-change="calcToolChangeTimeYear(resultsForm)" />
                     </tr>
                     <tr>
                         <td>Time to Change Tools</td>
                         <td>Minutes</td>
-                        <td>3</td>
-                        <td>3</td>
+                        <td> <input ng-model="resultsForm.toolChgTimeComp" ng-change="calcToolChangeTimeYear(resultsForm)" />
+                        <td> <input ng-model="resultsForm.toolChgTimeJIS" ng-change="calcToolChangeTimeYear(resultsForm)" />
                     </tr>
                     <tr class="formula">
                         <td>Total Tool Change Time per year</td>
                         <td>Minutes</td>
-                        <td>75</td>
-                        <td>51</td>
+                        <td> <input ng-model="resultsForm.toolChgTimeYrComp" />
+                        <td> <input ng-model="resultsForm.toolChgTimeYrJIS" />
                     </tr>
                     <tr class="formula">
                         <td>Total Tool Change Cost per year</td>
                         <td>$</td>
-                        <td>$93.75</td>
-                        <td>$63.75</td>
+                        <td> <input ng-model="resultsForm.toolChgCostYrComp" />
+                        <td> <input ng-model="resultsForm.toolChgCostYrJIS" />
                     </tr>
                     <tr class="formula">
                         <td>Machine Cost per year</td>
                         <td>$</td>
-                        <td>$1000.00</td>
-                        <td>$750.00</td>
+                        <td> <input ng-model="resultsForm.machCostYrComp" />
+                        <td> <input ng-model="resultsForm.machCostYrJIS" />
                     </tr>
                     <tr class="formula">
                         <td>Total Machine Cost per piece</td>
                         <td>$</td>
-                        <td>$2.19</td>
-                        <td>$1.63</td>
+                        <td> <input ng-model="resultsForm.totalMachCostPieceComp" />
+                        <td> <input ng-model="resultsForm.totalMachCostPieceJIS" />
                     </tr>
                     <tr class="new-section">
                         <td>Non-Perishable Tooling Cost</td>
@@ -190,8 +190,9 @@
     <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/Scripts/ResultsController.js"></script>
     <script src="~/Scripts/CostSavings.js"></script>
+    <script src="~/Scripts/LoadDirective.js"></script>
     <script src="//localhost:35729/livereload.js"></script>
     <!-- end: JavaScript-->
-
+    <p>{{calcAll(resultsForm)}}</p>
 </body>
 </html>

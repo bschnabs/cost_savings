@@ -310,6 +310,7 @@
     <Content Include="gruntfile.js" />
     <Content Include="Public\Custom.css" />
     <Content Include="Scripts\CostSavings.js" />
+    <Content Include="Scripts\LoadDirective.js" />
     <Content Include="Scripts\ResultsController.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="package.json" />
