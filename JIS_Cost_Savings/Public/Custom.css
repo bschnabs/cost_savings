@@ -41,21 +41,30 @@
 table.table.table-striped tr td,
 table.table.table-striped tr td input{
     text-align:center;
+    background-color:transparent;  
 }
 
-table.table.table-striped tr.formula td:nth-child(1n+3),
-table.table.table-striped tr.formula td:nth-child(1n+3) input
+table.table.table-striped tr td input{
+    border:none;
+}
+
+table.table.table-striped tr.formula td:nth-child(1n+3)
 {
     background-color:rgba(0,102,204,.1);
     text-align:right;
-    /*width:100px;*/
+}
+
+table.table.table-striped tr.formula td:nth-child(1n+3) input
+{
+    background-color:transparent;
+    text-align:right;
 }
 
 table.table.table-striped tr td:nth-child(1){
     font-size:small; 
     text-transform: uppercase;
     text-align: right;
-    max-width: 150px;
+    max-width: 200px;
 }
 
 .table-striped>tbody>tr:nth-of-type(odd){
@@ -63,7 +72,8 @@ table.table.table-striped tr td:nth-child(1){
 }
 
 table.table.table-striped tr td:nth-child(2){
-    max-width: 30px;
+    max-width: 40px;
+    min-width: 40px;
     border-right: solid 3px #ddd;
     /*box-shadow: rgba(0, 0, 0, .4) 1px 0 1px;*/
     background-color:#fff;
@@ -76,3 +86,6 @@ table.table.table-striped tr.new-section{
     font-weight:bold;
 }
 
+.table thead:first-child tr:first-child td{
+    text-align:center;
+}
