@@ -5,7 +5,7 @@ module.exports = function (grunt) {
             options:{
                 livereload: true
             },
-            files: ['Views/Home/Index.cshtml', 'Views/Home/*'],
+            files: ['Views/Index.cshtml', 'Views/*'],
         }
     });
 

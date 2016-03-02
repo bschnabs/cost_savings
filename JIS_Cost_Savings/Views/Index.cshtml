@@ -8,9 +8,19 @@
     <meta name="author" content="Bob Schnable">
     <!-- end: Meta -->
     <!-- start: CSS -->
-    <link href="~/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="~/Public/Custom.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Custom.css" rel="stylesheet">
     <!-- end: CSS -->
+
+    <!-- start: JavaScript-->
+    <script src="~/Content/Scripts/angular.min.js"></script>
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/Scripts/ResultsController.js"></script>
+    <script src="~/Content/Scripts/CostSavings.js"></script>
+    <script src="~/Content/Scripts/LoadDirective.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+
     <!-- start: Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- end: Favicon -->
@@ -20,7 +30,7 @@
     <!-- start: Header -->
     <div class="navbar navbar-default">
         <div class="container">
-            <a class="navbar-brand" href="index">JIS Cost Savings App</a>
+            <a class="navbar-brand" href="index">JIS oost Savings App</a>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -199,14 +209,6 @@
         </div>
     </div>
 
-    <!-- start: JavaScript-->
-    <script src="~/bower_components/angular/angular.min.js"></script>
-    <script src="~/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/Scripts/ResultsController.js"></script>
-    <script src="~/Scripts/CostSavings.js"></script>
-    <script src="~/Scripts/LoadDirective.js"></script>
-    <script src="//localhost:35729/livereload.js"></script>
     <!-- end: JavaScript-->
     <p>{{calcAll(resultsForm)}}</p>
 </body>
