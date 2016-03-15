@@ -6,7 +6,9 @@ namespace JIS_Cost_Savings
     {
         public Nancy()
         {
-            Get["/"] = _ => View["/home/index"];
+            Get["/"] = _ => View["home/index"];
+
+            Get["/home"] = _ => "Test Hello...";
         }
     }
 }

@@ -2,10 +2,10 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
-            options:{
+            options: {
                 livereload: true
             },
-            files: ['Views/Index.cshtml', 'Views/*'],
+            files: ['Views/**/*'],
         }
     });
 
